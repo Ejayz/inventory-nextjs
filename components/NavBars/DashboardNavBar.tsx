@@ -1,15 +1,26 @@
+import Image from "next/image"
+
 export default async function DashboardNavBar({
   child,
 }: Readonly<{
   child: React.ReactNode;
 }>) {
   return (
-    <div className="drawer">
+    <div className="drawer" data-theme={"light"}>
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <div className="w-full navbar bg-base-300">
-          <div className="flex-1 px-2 mx-2">Sledge Inventory</div>
+          <div className="flex-1 px-2 mx-2">
+            <a className="btn btn-ghost text-xl">
+              <Image
+                src="/png/logo-nav.png"
+                height={48}
+                width={215}
+                alt=""
+              />
+            </a>
+          </div>
           <div className="flex-none">
             <div className="dropdown dropdown-end">
               <div
